@@ -3,4 +3,9 @@ This is a repository for a snake game. Snake is a simple game which gain a lot o
 
 This game was created by python.
 
-Please download the "snake_project.exe" file and enjoy the game!
+## How to play
+- Please download the [`snake_project.rar`](https://github.com/milanmarkovic90/project_snake_game/snake_project.rar) file
+- Unzip the .rar file
+- Open up snake_project folder
+- Open up snake_project.exe
+- Enjoy the game
