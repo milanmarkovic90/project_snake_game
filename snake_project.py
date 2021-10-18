@@ -16,7 +16,7 @@ class Apple:
     # Apfel importieren
     def __init__(self, parent_screen):
         self.parent_screen = parent_screen
-        self.image = pygame.image.load("C:/Users/Milan/OneDrive/Dokumente/Python/snake_project/resources/apple.jpg").convert()
+        self.image = pygame.image.load("resources/apple.jpg").convert()
         self.image = pygame.transform.scale(self.image, (40, 40)) #EVTL. OBSOLET
         self.x = SIZE*3
         self.y = SIZE*3
@@ -38,7 +38,7 @@ class Snake:
     def __init__(self, parent_screen, length):
         self.length = length
         self.parent_screen = parent_screen
-        self.block = pygame.image.load("C:/Users/Milan/OneDrive/Dokumente/Python/snake_project/resources/block.jpg").convert()
+        self.block = pygame.image.load("resources/block.jpg").convert()
         self.block = pygame.transform.scale(self.block, (40, 40)) #EVTL. OBSOLET
         self.x = [SIZE]*length
         self.y = [SIZE]*length
@@ -107,16 +107,16 @@ class Game:
 
     # Spielsound implementieren
     def play_background_music(self):
-        pygame.mixer.music.load("C:/Users/Milan/OneDrive/Dokumente/Python/snake_project/resources/music.mp3")
+        pygame.mixer.music.load("resources/music.mp3")
         pygame.mixer.music.play()
     
     def play_sound(self, sound):
-        sound = pygame.mixer.Sound(f"C:/Users/Milan/OneDrive/Dokumente/Python/snake_project/resources/{sound}.mp3")
+        sound = pygame.mixer.Sound(f"resources/{sound}.mp3")
         pygame.mixer.Sound.play(sound)
 
     # Hintergrundbild einfügen
     def render_background(self):
-        bg = pygame.image.load("C:/Users/Milan/OneDrive/Dokumente/Python/snake_project/resources/background.jpg")
+        bg = pygame.image.load("resources/background.jpg")
         self.surface.blit(bg, (0,0))
 
     # Spielfunktion modularisieren
