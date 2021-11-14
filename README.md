@@ -1,4 +1,4 @@
-[![Python application](https://github.com/mmarkovic/project_snake_game/actions/workflows/python-app.yml/badge.svg)](https://github.com/mmarkovic/project_snake_game/actions/workflows/python-app.yml)
+[![Python application](https://github.com/milanmarkovic90/project_snake_game/actions/workflows/python-app.yml/badge.svg)](https://github.com/milanmarkovic90/project_snake_game/actions/workflows/python-app.yml)
 
 # Project Snake Game 🐍
 
