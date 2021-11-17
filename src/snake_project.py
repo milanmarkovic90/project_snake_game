@@ -5,6 +5,7 @@ import time
 import random
 
 # Konvertierung in OOP (Klassen und Objekten)
+# Hellworld
 
 # Variabeln kreieren für Blockgrösse und Hintergrundfarbe
 SIZE = 40
