@@ -1,11 +1,9 @@
 import pygame
-from pygame import surface
 from pygame.locals import *
 import time
 import random
 
 # Konvertierung in OOP (Klassen und Objekten)
-# Hellworld
 
 # Variabeln kreieren für Blockgrösse und Hintergrundfarbe
 SIZE = 40
@@ -53,13 +51,20 @@ class Snake:
 
     # Schlange bewegen
     def move_up(self):
-        self.direction = 'up'
+        if self.direction != 'down':
+            self.direction = 'up'
+
     def move_down(self):
-        self.direction = 'down'
+        if self.direction != 'up':
+            self.direction = 'down'
+
     def move_left(self):
-        self.direction = 'left'
+        if self.direction != 'right':
+            self.direction = 'left'
+
     def move_right(self):
-        self.direction = 'right'
+        if self.direction != 'left':
+            self.direction = 'right'   
 
     # Schlange bei Kollision mit Apfel vergrössern
     def increase_length(self):
