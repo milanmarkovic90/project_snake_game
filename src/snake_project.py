@@ -114,7 +114,7 @@ class Game:
 
     # Spielsound implementieren
     def play_background_music(self):
-        pygame.mixer.music.load("resources/music.mp3")
+        pygame.mixer.music.load("resources/music2.mp3")
         pygame.mixer.music.play()
     
     def play_sound(self, sound):
@@ -136,7 +136,7 @@ class Game:
         
         # Schlange isst Apfel
         if self.is_collision(self.snake.x[0], self.snake.y[0], self.apple.x, self.apple.y):
-            self.play_sound("ding")
+            self.play_sound("eat")
             self.snake.increase_length()
             self.apple.move()
             self.sleep_time = self.sleep_time - 0.005 # Beschleunigt das Spiel nach jeder Kollision mit Apfel
@@ -144,7 +144,7 @@ class Game:
         # Schlange kollidiert mit sich selbst
         for i in range(3,self.snake.length):
             if self.is_collision(self.snake.x[0], self.snake.y[0], self.snake.x[i], self.snake.y[i]):
-                self.play_sound("crash")
+                self.play_sound("game over")
                 raise "Game Over"
 
         # Schlange kollidiert mit Spielrand
