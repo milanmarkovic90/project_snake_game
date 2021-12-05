@@ -30,7 +30,7 @@ python .\snake_project.py
 
 This Code is an adaption of the [YouTube tutorial of CodeBasics](https://www.youtube.com/playlist?list=PLeo1K3hjS3usVcPj6osMx1tNkARllcRhZ).
 
-<img src="doc/YouTubeScreenShot.png" width="80%" max-widith="904px" />
+<img src="doc/YouTubeScreenShot.png" width="500">
 
 The extended original Code can be found here:
 
