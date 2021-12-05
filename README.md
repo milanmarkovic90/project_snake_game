@@ -5,7 +5,7 @@
 This is a repository for a snake game. Snake is a simple game which gain a lot of popularity during the time,
 when nokia 3310 was the most used cell phone.
 
-<img src="doc/GameScreenShot.png" width="80%" max-width="600px" />
+<img src="doc/GameScreenShot2.png" width="80%" max-width="600px" />
 
 This game was created with python.
 
