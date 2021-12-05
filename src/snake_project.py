@@ -145,6 +145,11 @@ class Game:
                 self.play_sound("crash")
                 raise "Game Over"
 
+        # Schlange kollidiert mit Spielrand
+        if not (0 <= self.snake.x[0] <= 1000 and 0 <= self.snake.y[0] <= 800):
+            self.play_sound("game over")
+            raise "Game Over"
+
     # Punktezahl anzeigen
     def display_score(self):
         font = pygame.font.SysFont('arial',30)
