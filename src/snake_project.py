@@ -102,6 +102,7 @@ class Game:
         self.snake.draw()
         self.apple = Apple(self.surface)
         self.apple.draw()
+        self.sleep_time = 0.2
 
     # Kollision Schlange mit Apfel implementieren
     def is_collision(self, x1, y1, x2, y2):
@@ -138,6 +139,7 @@ class Game:
             self.play_sound("ding")
             self.snake.increase_length()
             self.apple.move()
+            self.sleep_time = self.sleep_time - 0.005 # Beschleunigt das Spiel nach jeder Kollision mit Apfel
 
         # Schlange kollidiert mit sich selbst
         for i in range(3,self.snake.length):
@@ -171,6 +173,7 @@ class Game:
     def reset(self):
         self.snake = Snake(self.surface, 1)
         self.apple = Apple(self.surface)
+        self.sleep_time = 0.2
 
     # Autostart einrichten
     def run(self):
