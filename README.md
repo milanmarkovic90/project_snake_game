@@ -2,38 +2,33 @@
 
 # Project Snake Game 🐍
 
-This is a repository for a snake game. Snake is a simple game which gain a lot of popularity during the time,
+This is a repository for a Snake Game made in Python. Snake is a simple game which gain a lot of popularity during the time,
 when nokia 3310 was the most used cell phone.
 
-<img src="doc/GameScreenShot2.PNG" width="80%" max-width="600px" />
-![GameScreenshot2](https://user-images.githubusercontent.com/72462821/144758487-178cec1a-bfb5-44a4-a6be-fed7e9a6028b.PNG)
+<img src="doc/GameScreenshot2.PNG" width="500">
 
-This game was created with python.
 
 ## How to play
 
-### Prerequirements
+### For simple use
+
+1. Download the latest version under `releases`.
+2. Unpack the .zip file and open up `snake_project.exe` in the newly unpacked folder
+3. Enjoy the Game!
+
+### For programmers
 
 1. Install [phyton](https://www.python.org/downloads/release/python-3100/) on your machine!
 2. Install the `pygame` module by executing ``pip install pygame`` in the console
-
-There are two ways on how you can run the game.
-
-### Run the phyton Script
-
-One option is to clone the repostiory and run the script by executing the following command line argument:
-
+3. Clone the repositroy and run the script by executing the following command line argument:
 ```
 python .\snake_project.py
 ```
-
-### Download the .rar-file
-
-The other option is to download and run the [executables](https://github.com/milanmarkovic90/project_snake_game/blob/main/snake_project.rar).
+4. Enjoy the Game!
 
 ## Credits
 
-This Code is an adaption of the [YouTube tutorial of freeCodeCamp.org](https://www.youtube.com/watch?v=8dfePlONtls).
+This Code is an adaption of the [YouTube tutorial of CodeBasics](https://www.youtube.com/playlist?list=PLeo1K3hjS3usVcPj6osMx1tNkARllcRhZ).
 
 <img src="doc/YouTubeScreenShot.png" width="80%" max-widith="904px" />
 
