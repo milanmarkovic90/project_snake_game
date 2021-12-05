@@ -15,10 +15,15 @@ class Apple:
     # Apfel importieren
     def __init__(self, parent_screen):
         self.parent_screen = parent_screen
-        self.image = pygame.image.load("resources/apple.jpg").convert()
-        self.image = pygame.transform.scale(self.image, (40, 40)) #EVTL. OBSOLET
-        self.x = SIZE*3
-        self.y = SIZE*3
+        # self.image = pygame.image.load("resources/apple.jpg").convert()
+        self.images = [pygame.image.load("resources/apple_red.png").convert(), 
+        pygame.image.load("resources/apple_green.png").convert(),
+        pygame.image.load("resources/apple_yellow.png").convert(),
+        pygame.image.load("resources/apple_orange.png").convert(),]
+        self.image = random.choice(self.images)
+        # self.image = pygame.transform.scale(self.image, (40, 40)) #EVTL. OBSOLET
+        self.x = SIZE
+        self.y = SIZE
     
     # Apfel zeichnen
     def draw(self):
@@ -29,6 +34,7 @@ class Apple:
     def move(self):
         self.x = random.randint(0,24)*SIZE
         self.y = random.randint(0,19)*SIZE
+        self.image = random.choice(self.images)
 
 # Klasse "Schlange"
 class Snake:
@@ -37,7 +43,7 @@ class Snake:
     def __init__(self, parent_screen, length):
         self.length = length
         self.parent_screen = parent_screen
-        self.block = pygame.image.load("resources/block.jpg").convert()
+        self.block = pygame.image.load("resources/block2.png").convert()
         self.block = pygame.transform.scale(self.block, (40, 40)) #EVTL. OBSOLET
         self.x = [SIZE]*length
         self.y = [SIZE]*length
@@ -115,7 +121,7 @@ class Game:
     # Spielsound implementieren
     def play_background_music(self):
         pygame.mixer.music.load("resources/music2.mp3")
-        pygame.mixer.music.play()
+        pygame.mixer.music.play(-1,0)
     
     def play_sound(self, sound):
         sound = pygame.mixer.Sound(f"resources/{sound}.mp3")
@@ -123,7 +129,7 @@ class Game:
 
     # Hintergrundbild einfügen
     def render_background(self):
-        bg = pygame.image.load("resources/background.jpg")
+        bg = pygame.image.load("resources/background3.jpg")
         self.surface.blit(bg, (0,0))
 
     # Spielfunktion modularisieren
@@ -217,7 +223,7 @@ class Game:
                 pause = True
                 self.reset()
 
-            time.sleep(0.2)
+            time.sleep(self.sleep_time)
 
 # Spiel starten
 if __name__ == "__main__":
