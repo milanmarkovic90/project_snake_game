@@ -5,23 +5,20 @@ import random
 
 # Konvertierung in OOP (Klassen und Objekten)
 
-# Variabeln kreieren für Blockgrösse und Hintergrundfarbe
+# Variabeln kreieren für Blockgrösse
 SIZE = 40
-BACKGROUND_COLOR = 110, 110, 5
 
-# Klasse "Apfel"
+# Klasse "Apfel" erstellen
 class Apple:
 
     # Apfel importieren
     def __init__(self, parent_screen):
         self.parent_screen = parent_screen
-        # self.image = pygame.image.load("resources/apple.jpg").convert()
-        self.images = [pygame.image.load("resources/apple_red.png").convert(), 
-        pygame.image.load("resources/apple_green.png").convert(),
-        pygame.image.load("resources/apple_yellow.png").convert(),
-        pygame.image.load("resources/apple_orange.png").convert(),]
-        self.image = random.choice(self.images)
-        # self.image = pygame.transform.scale(self.image, (40, 40)) #EVTL. OBSOLET
+        self.images = [pygame.image.load("resources/apple_red.png").convert(), # Roten Apfel importieren
+        pygame.image.load("resources/apple_green.png").convert(), # Grünen Apfel importieren
+        pygame.image.load("resources/apple_yellow.png").convert(), # Gelben Apfel importieren
+        pygame.image.load("resources/apple_orange.png").convert(),] # Orangen Apfel importieren
+        self.image = random.choice(self.images) # Zufällige Bildauswahl beim Import Apfel
         self.x = SIZE
         self.y = SIZE
     
@@ -34,17 +31,16 @@ class Apple:
     def move(self):
         self.x = random.randint(0,24)*SIZE
         self.y = random.randint(0,19)*SIZE
-        self.image = random.choice(self.images)
+        self.image = random.choice(self.images) # Um die zufällige Bildauswahl auch nach der Kollision beibehalten 
 
 # Klasse "Schlange"
 class Snake:
 
-    # Spielfenster bauen und Schlange importieren
+    # Schlange importieren
     def __init__(self, parent_screen, length):
         self.length = length
         self.parent_screen = parent_screen
         self.block = pygame.image.load("resources/block2.png").convert()
-        self.block = pygame.transform.scale(self.block, (40, 40)) #EVTL. OBSOLET
         self.x = [SIZE]*length
         self.y = [SIZE]*length
         self.direction = 'down'
@@ -56,6 +52,7 @@ class Snake:
         pygame.display.flip()
 
     # Schlange bewegen
+    # Gleichzeitig sicherstellen, dass die Schlange nicht in die entgegengesetzte Richtung gehen kann
     def move_up(self):
         if self.direction != 'down':
             self.direction = 'up'
@@ -78,7 +75,7 @@ class Snake:
         self.x.append(-1)
         self.y.append(-1)
 
-    # Bewegung implementieren
+    # Bewegung der Schlange implementieren
     def walk(self):
 
         for i in range(self.length-1,0,-1):
@@ -108,7 +105,7 @@ class Game:
         self.snake.draw()
         self.apple = Apple(self.surface)
         self.apple.draw()
-        self.sleep_time = 0.2
+        self.sleep_time = 0.2 # Startgeschwindigkeit
 
     # Kollision Schlange mit Apfel implementieren
     def is_collision(self, x1, y1, x2, y2):
@@ -179,7 +176,7 @@ class Game:
     def reset(self):
         self.snake = Snake(self.surface, 1)
         self.apple = Apple(self.surface)
-        self.sleep_time = 0.2
+        self.sleep_time = 0.2 # Spielgeschwindigkeit zurücksetzen
 
     # Autostart einrichten
     def run(self):
@@ -229,10 +226,3 @@ class Game:
 if __name__ == "__main__":
     game = Game()
     game.run()
-
-# Learnings:
-# 1.    Wenn bei Programmieren etwas mehrfach benutzt wird, ist es besser, eine Variabel zu kreeiren
-# 1a.   Oder auch eine Funktion.
-# 2.    Objektorientiertes Programmieren: Macht Sinn, wenn der Code besonders lang ist (> 30 Zeilen).
-#       Macht es einfacher für eine Drittperson zu verstehen, was gemacht wurde.
-# 3.    Sämtliche UI Änderungen immer am Schluss mit pygame.display.flip() beenden. -> Für das Refreshing des Screens.
