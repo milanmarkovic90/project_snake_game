@@ -13,18 +13,27 @@ when nokia 3310 was the most used cell phone.
 ### For simple use
 
 1. Download the latest version under `releases`.
-2. Unpack the .zip file and open up `snake_project.exe` in the newly unpacked folder
-3. Enjoy the Game!
+2. Unpack the .zip file and open up `snake_project.exe` in the newly unpacked folder.
+3. Enjoy the game!
 
 ### For programmers
 
 1. Install [phyton](https://www.python.org/downloads/release/python-3100/) on your machine!
-2. Install the `pygame` module by executing ``pip install pygame`` in the console
-3. Clone the repositroy and run the script by executing the following command line argument:
+2. Install the `pygame` module by executing ``pip install pygame`` in the console.
+3. Clone the repository and run the script by executing the following command line argument:
 ```
 python .\snake_project.py
 ```
-4. Enjoy the Game!
+4. Enjoy the game!
+
+### Open up with VS Code
+
+1. Install [phyton](https://www.python.org/downloads/release/python-3100/) on your machine!
+2. Install the `pygame` module by executing ``pip install pygame`` in the console.
+3. Clone the repository on your local machine.
+4. Open up "snake_project.py" with VS Code.
+5. Change directory in terminal to \"name of repository"\src
+6. Run the script, enjoy the game!
 
 ## Credits
 
