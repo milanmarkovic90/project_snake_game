@@ -16,6 +16,8 @@ when nokia 3310 was the most used cell phone.
 2. Unpack the .zip file and open up `snake_project.exe` in the newly unpacked folder.
 3. Enjoy the game!
 
+Important: You will may have issues running the .exe file with your antivirus software. Just let the software scan the .exe file and you will be able to run the game.
+
 ### For programmers
 
 1. Install [phyton](https://www.python.org/downloads/release/python-3100/) on your machine!
